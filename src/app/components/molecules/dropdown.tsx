@@ -9,9 +9,9 @@ return classes.filter(Boolean).join(" ");
 
 function Dropdown() {
   const dropLists = [
-    { icon: 0, name: "On sale" },
-    { icon: 1, name: "Stock Status" },
-    { icon: 2, name: "Product Status" },
+    { status: ["Yes", "No"], name: "On sale" },
+    { status: ["In stock", "Out of Stock"], name: "Stock Status" },
+    { status: ["Active", "Acknowledged", "Pending"], name: "Product Status" },
   ];
 return (
   <>
@@ -38,60 +38,28 @@ return (
         >
           <Menu.Items className="absolute z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
             <div className="py-1">
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
+              {drop.status.map(
+                (
+                  status,
+                  j
+                ) => (
+                  <Menu.Item key={j}>
+                    {({ active }) => (
+                      <a
+                        href="#"
+                        className={classNames(
+                          active
+                            ? "bg-gray-100 text-gray-900"
+                            : "text-gray-700",
+                          "block px-4 py-2 text-sm"
+                        )}
+                      >
+                        {status}
+                      </a>
                     )}
-                  >
-                    Account settings
-                  </a>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
-                    )}
-                  >
-                    Support
-                  </a>
-                )}
-              </Menu.Item>
-              <Menu.Item>
-                {({ active }) => (
-                  <a
-                    href="#"
-                    className={classNames(
-                      active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
-                    )}
-                  >
-                    License
-                  </a>
-                )}
-              </Menu.Item>
-              <form method="POST" action="#">
-                <Menu.Item>
-                  {({ active }) => (
-                    <button
-                      type="submit"
-                      className={classNames(
-                        active ? "bg-gray-100 text-gray-900" : "text-gray-700",
-                        "block w-full px-4 py-2 text-left text-sm"
-                      )}
-                    >
-                      Sign out
-                    </button>
-                  )}
-                </Menu.Item>
-              </form>
+                  </Menu.Item>
+                )
+              )}
             </div>
           </Menu.Items>
         </Transition>

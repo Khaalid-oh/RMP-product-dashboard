@@ -4,7 +4,7 @@
 
 .react-daterange-picker.react-daterange-picker
   .react-daterange-picker__wrapper {
-  @apply border-none px-2 py-[7px] rounded focus:text-gray-700 ring-1 ring-inset ring-gray-400;
+  @apply border-none px-2 py-[7px] rounded focus:text-gray-700 ring-1 ring-inset ring-gray-400 mb-2;
 }
 
 /* .react-daterange-picker.react-daterange-picker
