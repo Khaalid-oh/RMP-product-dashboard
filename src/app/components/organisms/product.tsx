@@ -12,10 +12,10 @@ function Product() {
       .then((data) => setProducts(data));
   }, []);
 
-  const usersPerPgae = 3
-  const pageVisited = pageNumber * usersPerPgae
+  const productsPerPage = 3
+  const pageVisited = pageNumber * productsPerPage
 
-  const displayUsers = products.slice(pageVisited, pageVisited + usersPerPgae).map((product) => {
+  const displayUsers = products.slice(pageVisited, pageVisited + productsPerPage).map((product) => {
     return (
       <div>
         {products.length > 0 ? (
@@ -43,16 +43,17 @@ function Product() {
     );
   })
 
-  const pageCount = Math.ceil(products.length/usersPerPgae)
+  const pageCount = Math.ceil(products.length/productsPerPage)
 
   const changePage =  ({selected}) => {
     setPageNumber(selected)}
-  }
+  
 
   return (
     <div>
      {displayUsers}
      <ReactPaginate
+     className="flex gap-2 p-2 border-[1px] w-[20%]"
       previousLabel={'Prev'}
       nextLabel={'Next'}
       pageCount={pageCount}
