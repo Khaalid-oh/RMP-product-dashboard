@@ -12,7 +12,7 @@ function Product() {
       .then((data) => setProducts(data));
   }, []);
 
-  const productsPerPage = 3
+  const productsPerPage = 4
   const pageVisited = pageNumber * productsPerPage
 
   const displayUsers = products.slice(pageVisited, pageVisited + productsPerPage).map((product) => {
@@ -20,7 +20,7 @@ function Product() {
       <div>
         {products.length > 0 ? (
           <div>
-            <div className="flex items-center justify-start w-[%] p-4 text-sm gap-4">
+            <div className="flex items-center justify-start p-4  w-[%]  text-sm gap-4">
               <div className="">
                 <img
                   className="h-20 w-20 rounded-md border-[1px] object-scale-down"
@@ -50,16 +50,20 @@ function Product() {
   
 
   return (
-    <div>
-     {displayUsers}
-     <ReactPaginate
-     className="flex gap-2 p-2 border-[1px] w-[20%]"
-      previousLabel={'Prev'}
-      nextLabel={'Next'}
-      pageCount={pageCount}
-      onPageChange={changePage}
-
-     />
+    <div className="">
+      {displayUsers}
+      <ReactPaginate
+        className="paginationBttns flex items-center justify-center gap-2 p-2 border-[1px] w-[20%] border-blue-200 rounded-md translate-x-4"
+        previousLabel={"Prev"}
+        nextLabel={"Next"}
+        pageCount={pageCount}
+        onPageChange={changePage}
+        containerClassName={"paginationBttns"}
+        previousLinkClassName={"previousBttn"}
+        nextLinkClassName={"nextBttn"}
+        disabledClassName={"paginationDisabled"}
+        activeClassName={"paginationActive"}
+      />
     </div>
   );
 }

@@ -17,5 +17,9 @@
   .react-daterange-picker__wrapper
   .react-daterange-picker__inputGroup,
 .react-daterange-picker__range-divider {
-  @apply text-gray-400;
+  @apply text-gray-400 text-sm p-[2px];
+}
+
+.paginationBttns a {
+  @apply px-[6px] py-1 border-[1px] border-blue-200 rounded-sm;
 }
