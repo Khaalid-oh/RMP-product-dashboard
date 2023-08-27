@@ -1,9 +1,10 @@
 import React from 'react'
+import Mock from '../atoms/mock'
 
 function Archived() {
   return (
     <div>
-      Archived
+      <Mock/>
     </div>
   )
 }
