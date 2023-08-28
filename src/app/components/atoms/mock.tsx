@@ -17,13 +17,13 @@ function Mock() {
   }
 
   return (
-    <nav className='w-full flex h-14 mx-auto p-4 gap-6 text-sm'>
+    <nav className='w-full flex justify-start items-center h-14 mx-auto p-4 gap-6 text-sm'>
       {navItems.map((nav, i)  =>  (
-        <a className={`cursor-pointer flex ${hover === i ? "flex flex-col after:bg-gray-800 after:flex-col after:w-full after:ease-in-out after:h-[2px] after:content-[''] after:rounded-sm after:transition-all after:duration-300" : ""}`}  href={nav.link} key={i}
+        <a className={`flex cursor-pointer h-8 gap-1 ${hover === i ? "flex flex-col after:bg-gray-800 after:flex-col after:w-full after:ease-in-out after:h-[2px] after:content-[''] after:rounded-sm after:transition-all after:duration-300" : ""}`}  href={nav.link} key={i}
         onClick={() => handleHover(i)}>{nav.name}</a>
       ))}
     </nav>
   )
 }
-
+//loki
 export default Mock
