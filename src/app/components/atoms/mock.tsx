@@ -25,5 +25,5 @@ function Mock() {
     </nav>
   )
 }
-//loki
+
 export default Mock
