@@ -10,7 +10,7 @@ function Mock() {
     { id: 3, link: "#assets", name: "Assets" },
   ];
 
-  const [hover, setHover] = useState<null | number>(null);
+  const [hover, setHover] = useState<null | number>(0);
   
   const handleHover = (val :number) => {
     setHover(val)
