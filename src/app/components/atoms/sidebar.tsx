@@ -26,8 +26,7 @@ const sidebar = [
           key={index}
           onClick={() => handleActivebar(index)}
         >
-          {" "}
-          {sideV.name}{" "}
+          {sideV.name}
         </div>
       ))}
     </div>
