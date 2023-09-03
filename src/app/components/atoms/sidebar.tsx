@@ -32,5 +32,5 @@ const sidebar = [
     </div>
   );
 }
-
+//lose
 export default Sidebar
