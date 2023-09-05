@@ -12,7 +12,7 @@ function Product() {
       .then((data) => setProducts(data));
   }, []);
 
-  const productsPerPage = 4;
+  const productsPerPage = 5;
   const pageVisited = pageNumber * productsPerPage;
 
   const displayUsers = products
