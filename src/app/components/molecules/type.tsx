@@ -3,5 +3,6 @@ interface MyStuff {
 }
 
 const numEnd = [
-  {int:0, java: 'Goland'}
+  {int:0, java: 'Goland'},
+  {int:1, java: 'Bix'}
 ]
