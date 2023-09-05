@@ -4,5 +4,6 @@ interface MyStuff {
 
 const numEnd = [
   {int:0, java: 'Goland'},
-  {int:1, java: 'Bix'}
+  {int:1, java: 'Bix'},
+  {int:0, java: 'Goland'}
 ]
