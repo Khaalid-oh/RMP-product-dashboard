@@ -7,3 +7,5 @@ const numEnd = [
   {int:1, java: 'Bix'},
   {int:2, java: 'Goland'}
 ]
+
+console.log(numEnd)
