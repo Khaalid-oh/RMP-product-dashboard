@@ -8,3 +8,4 @@ const numEnd = [
   {int:2, java: 'Goland'}
 ]
 
+console.log(numEnd)
