@@ -8,4 +8,10 @@ const numEnd = [
   {int:2, java: 'Goland'}
 ]
 
-console.log(numEnd)
+
+const javas =[] 
+
+for (const pjava of numEnd) {
+  javas.push(pjava.java)
+}
+console.table(numEnd)
